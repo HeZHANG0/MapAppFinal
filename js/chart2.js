@@ -1,5 +1,5 @@
 var age = ['<20', '20-34', '35-54', '55-74', '75+'];
-var barChartData = {
+var agechart= {
   labels: age,
   datasets: [{
     label: 'Case count',
@@ -8,24 +8,5 @@ var barChartData = {
     borderWidth: 1,
     data: [  540, 4156, 5830, 5389, 2391 ]
   }]
-
-};
-
-window.onload = function() {
-  var ctx2 = document.getElementById('canvas2').getContext('2d');
-  window.myBar = new Chart(ctx2, {
-    type: 'bar',
-    data: barChartData,
-    options: {
-      responsive: true,
-      legend: {
-        position: 'top',
-      },
-      title: {
-        display: true,
-        text: 'Case count by age group'
-      }
-    }
-  });
 
 };

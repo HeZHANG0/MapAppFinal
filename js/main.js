@@ -1,7 +1,7 @@
 
 var map = L.map('map', {
-  center: [37.756532, -122.443790],
-  zoom: 12
+  center: [39.952627, -75.163651],
+  zoom: 14
 });
 var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -10,10 +10,6 @@ var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{
   maxZoom: 20,
   ext: 'png'
 }).addTo(map);
-
-// The three charts. Since age and sex composition data is not available at zip code level, I use static charts for COVID-19 cases by date, age, and sex.
-
-
 
 
 // Loading data
