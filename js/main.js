@@ -27,10 +27,15 @@ var dic={"<200":[0,200],
 $(document).ready(function() {
   $.ajax(covidData).done(function(data) {
     var v=$("#input").val()
-    console.log(data.slice(1,10))
+    console.log(v)
     var filter= function(feature){
       if (feature.properties.count >dic[v][0] && feature.properties.count <=dic[v][1]){ return true}
     }
+    featureGroup = L.geoJson(data,{
+       style: {fillColor:'#FF9933'},
+       filter: filter
+    }).addTo(map)
+
     $("#input").change(function(data){
       v=$("#input").val()
       if (featureGroup !== undefined) {
